@@ -1,0 +1,31 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css">
+  <div id="demo">
+      <div id="buttons">
+  <button id="Hillary Clinton"><img src="http://i.imgur.com/DJ1UxT0.png" height="50"/></button>
+  <button id="Bernard Sanders"><img src="http://i.imgur.com/hGWWgNh.png" height="50"/></button>
+  <button id="Ted Cruz"><img src="http://i.imgur.com/7KPA6HB.png" height="50"/></button>
+  <button id="Benjamin Carson"><img src="http://i.imgur.com/0Is3nwo.png" height="50"/></button>
+  <button id="Marco Rubio"><img src="http://i.imgur.com/DGmO2Th.png" height="50"/></button>
+  <button id="Jeb Bush"><img src="http://i.imgur.com/4IiAkMB.png" height="50"/></button>
+  <button id="John Kasich"><img src="http://i.imgur.com/dYtAT2A.png" height="50"/></button>
+    <button id="Donald Trump"><img src="http://i.imgur.com/F6sbxYQ.png" height="50"/></button>
+    </div>
+  </div>
+<style>
+#demo button{
+    border: none;
+    background: none;
+    align: center;
+    
+}
+#demo button:hover {
+    opacity: 0.75;
+}
+
+#demo button:active {
+     opacity: 0.75;
+}
+</style>
+</html>
