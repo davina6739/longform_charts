@@ -1,0 +1,55 @@
+<html>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 100px; height: 400px; margin: 0 auto"></div>
+
+	<style>
+.highcharts-legend {
+	  display: none!important;
+	}
+</style>
+<script>
+$(function() {
+  Highcharts.setOptions({
+    lang: {
+      thousandsSep: ','
+    }
+  });
+  $('#container').highcharts({
+    chart: {
+      type: 'column'
+    },
+
+    title: {
+      text: '2016 Presidential Campaign Contributions (Total Contributions)'
+    },
+    yAxis: {
+      gridLineWidth: 0,
+      title: {
+        text: 'Total Contributions'
+      }
+    },
+    xAxis: {
+      categories: ['Hillary Clinton', 'Bernard Sanders', 'Ted Cruz', 'Benjamin Carson', 'Marco Rubio', 'Jeb Bush', 'John Kasich', 'Donald Trump']
+    },
+    credits: {
+      enabled: false
+    },
+    tooltip: {
+      pointFormat: '<span style="color:{series.color}">Total Contributions</span>: $</br>{point.y}'
+    },
+    series: [{
+      name: 'Total Contributions',
+      data: [147002481, 138099290, 66220454, 63029672, 43452802, 34361473, 12024683, 9809453]
+
+
+    }]
+  });
+});
+</script>
+</body>
+</html>
+
