@@ -1,0 +1,49 @@
+<html>
+<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div>
+
+<style>
+.highcharts-legend {
+	  display: none!important;
+	}
+	</style>
+	
+	<script>
+	$(function () {
+   /*
+   Highchart.setOptions({
+   lang: {
+      thousandsSep: ','
+    }
+   });
+   */
+    // Create the chart
+    $('#container').highcharts({
+				chart: {
+      			type: 'column'
+    			},
+        title: {
+            text: 'Contributions to Hillary Clinton'
+        },
+
+        data: {
+            googleSpreadsheetKey: '1ms6GXrV5UFH8pQRh-Mtn4a0NyRdXF9iFQcfHb3Mb54g'
+        }, 
+        credits: {
+      enabled: false
+    },
+     tooltip: {
+      pointFormat: '<span style="color:{series.color}">Total Contributions</span>: $</br>{point.y}'
+    }, 
+     yAxis: {
+      gridLineWidth: 0,
+     }
+    });
+});
+</script>
+</body>
+</html>
