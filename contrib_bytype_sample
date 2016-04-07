@@ -1,0 +1,67 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css">
+<div id="demo">
+  <div id="buttons">
+    <button id="Hillary Clinton"><img src="http://i.imgur.com/DJ1UxT0.png" height="50" /></button>
+    <button id="Bernard Sanders"><img src="http://i.imgur.com/hGWWgNh.png" height="50" /></button>
+    <button id="Ted Cruz" data-attr="frames/hillary.html"><img src="http://i.imgur.com/7KPA6HB.png" height="50" /></button>
+    <button id="Benjamin Carson"><img src="http://i.imgur.com/0Is3nwo.png" height="50" /></button>
+    <button id="Marco Rubio"><img src="http://i.imgur.com/DGmO2Th.png" height="50" /></button>
+    <button id="Jeb Bush"><img src="http://i.imgur.com/4IiAkMB.png" height="50" /></button>
+    <button id="John Kasich"><img src="http://i.imgur.com/dYtAT2A.png" height="50" /></button>
+    <button id="Donald Trump"><img src="http://i.imgur.com/F6sbxYQ.png" height="50" /></button>
+  </div>
+</div>
+<style>
+highcharts-legend {
+  display: none!important;
+}
+
+#demo {
+  top: 0;
+  margin-top: 0;
+  margin-left: 35%;
+}
+
+#demo button:hover {
+  opacity: 0.75;
+}
+
+#demo button:active {
+  opacity: 0.75;
+}
+</style>
+<script>
+$(function() {
+
+  $('#container').highcharts({
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Contributions to Hillary Clinton'
+    },
+    data: {
+      googleSpreadsheetKey: '1ms6GXrV5UFH8pQRh-Mtn4a0NyRdXF9iFQcfHb3Mb54g',
+    },
+    credits: {
+      enabled: false
+    },
+    tooltip: {
+      pointFormat: '<span style="color:{series.color}">Total Contributions</span>: $</br>{point.y}'
+    },
+    yAxis: {
+      gridLineWidth: 0,
+
+    }
+  });
+});
+</script>
+</html>
